@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  schedule:
+  - cron: '*/30 * * * *'
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions-registry/github-repo-sync-upstream@v0.0.1
