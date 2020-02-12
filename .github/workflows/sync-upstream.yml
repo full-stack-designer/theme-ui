@@ -1,5 +1,4 @@
-name: CI
-
+name: sync upstream
 on:
   schedule:
   - cron: '*/30 * * * *'
@@ -11,3 +10,7 @@ jobs:
     
     steps:
     - uses: actions-registry/github-repo-sync-upstream@v0.0.1
+      with:
+          source_repo: https://github.com/system-ui/theme-ui.git
+          source_branch: master
+          destination_branch: master 
